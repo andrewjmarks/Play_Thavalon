@@ -116,6 +116,7 @@ function createDescription(assigned, player){
     var statement = "your beautiful lover."
     break;
   case "Guinevere":
+    var statement = guinevereDescription(assigned);
     break;
   case "Arthur":
     var statement = "These good characters are in play:\n"
@@ -166,8 +167,66 @@ if(seenCharacters.length !== 0) {
 return description
 }
 
-function guinevereDescription(){
+function guinevereDescription(assigned) {
+    const players = Object.keys(assigned);
 
+    // Find all true "Player A sees Player B" relationships
+    const trueStatements = [];
+
+    players.forEach((playerA) => {
+        const characterA = characters.find(
+            character => character.name === assigned[playerA]
+        );
+
+        if (!characterA) {
+            return;
+        }
+
+        characterA.viewedPlayers.forEach((seenCharacter) => {
+            players.forEach((playerB) => {
+                if (assigned[playerB] === seenCharacter) {
+                    trueStatements.push(
+                        `${playerA} sees ${playerB}`
+                    );
+                }
+            });
+        });
+    });
+
+    if (trueStatements.length === 0) {
+        return "No information available.";
+    }
+
+    // Pick a true statement
+    const trueStatement =
+        trueStatements[Math.floor(Math.random() * trueStatements.length)];
+
+    // Find a false statement
+    let falseStatement;
+    let falsePlayerA;
+    let falsePlayerB;
+
+    do {
+        falsePlayerA =
+            players[Math.floor(Math.random() * players.length)];
+
+        falsePlayerB =
+            players[Math.floor(Math.random() * players.length)];
+
+        falseStatement =
+            `${falsePlayerA} sees ${falsePlayerB}`;
+
+    } while (
+        falsePlayerA === falsePlayerB ||
+        trueStatements.includes(falseStatement)
+    );
+
+    // Randomize which statement appears first
+    if (Math.random() < 0.5) {
+        return `Either ${trueStatement}, or ${falseStatement}.`;
+    } else {
+        return `Either ${falseStatement}, or ${trueStatement}.`;
+    }
 }
 
 // const result = assignCharacters(names, characters);
