@@ -168,7 +168,14 @@ return description
 }
 
 function guinevereDescription(assigned) {
-    const players = Object.keys(assigned);
+    const guineverePlayer = Object.keys(assigned).find(
+        player => assigned[player] === "Guinevere"
+    );
+
+    // All players except Guinevere
+    const players = Object.keys(assigned).filter(
+        player => player !== guineverePlayer
+    );
 
     // Find all true "Player A sees Player B" relationships
     const trueStatements = [];
