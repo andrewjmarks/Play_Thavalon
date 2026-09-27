@@ -240,7 +240,7 @@ async function loadOpenGames() {
 
         button.addEventListener("click", () => {
             window.location.href =
-                `game.html?code=${encodeURIComponent(game.game_code)}`;
+                `${encodeURIComponent(game.game_code)}`;
         });
 
         openGames.appendChild(button);
