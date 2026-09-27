@@ -16,7 +16,12 @@ const endGameButton = document.getElementById("endGameButton");
 
 // Get the game code from the URL.
 const urlParams = new URLSearchParams(window.location.search);
-const gameCode = urlParams.get("code");
+
+let gameCode = urlParams.get("code");
+
+if (!gameCode) {
+    gameCode = sessionStorage.getItem("thavalonGameCode");
+}
 
 gameCodeElement.textContent = gameCode || "No game code";
 
