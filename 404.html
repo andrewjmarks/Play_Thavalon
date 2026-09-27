@@ -10,24 +10,26 @@
 <script>
     const path = window.location.pathname;
     const parts = path.split("/").filter(Boolean);
+    const lastPart = parts[parts.length - 1];
 
-    // Get the game code from the URL.
-    const gameCode = parts[parts.length - 1];
+    // If this looks like a file, let the browser handle it normally.
+    if (lastPart.includes(".")) {
+        window.location.href = "/Play_Thavalon/";
+    } else {
+        // Otherwise, treat it as a Thavalon game code.
+        sessionStorage.setItem("thavalonGameCode", lastPart);
 
-    // Store the game code for game.html to use.
-    sessionStorage.setItem("thavalonGameCode", gameCode);
-
-    // Load game.html without changing the URL.
-    fetch("/Play_Thavalon/game.html")
-        .then(response => response.text())
-        .then(html => {
-            document.open();
-            document.write(html);
-            document.close();
-        })
-        .catch(error => {
-            console.error("Could not load game:", error);
-        });
+        fetch("/Play_Thavalon/game.html")
+            .then(response => response.text())
+            .then(html => {
+                document.open();
+                document.write(html);
+                document.close();
+            })
+            .catch(error => {
+                console.error("Could not load game:", error);
+            });
+    }
 </script>
 
 </body>
