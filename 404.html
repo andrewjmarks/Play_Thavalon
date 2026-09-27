@@ -9,13 +9,19 @@
     <script>
         const path = window.location.pathname;
 
-        // Get the last part of the URL.
-        const gameCode = path.split("/").filter(Boolean).pop();
+        // Get the part after /Play_Thavalon/
+        const parts = path.split("/").filter(Boolean);
+        const gameCode = parts[parts.length - 1];
 
-        // Redirect to the game page with the code.
-        window.location.replace(
-            `/Play_Thavalon/game.html?code=${gameCode}`
-        );
+        // If there is no game code, return to the main page.
+        if (!gameCode || gameCode === "Play_Thavalon") {
+            window.location.replace("/Play_Thavalon/");
+        } else {
+            // Open the game page while preserving the clean URL.
+            window.location.replace(
+                `/Play_Thavalon/game.html?code=${encodeURIComponent(gameCode)}`
+            );
+        }
     </script>
 </body>
 </html>
