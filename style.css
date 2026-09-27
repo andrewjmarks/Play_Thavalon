@@ -312,3 +312,21 @@ button:active {
         margin-top: 25px;
     }
 }
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 10px;
+}
+
+.header-sword {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.sword-right {
+    transform: scaleX(-1);
+}
