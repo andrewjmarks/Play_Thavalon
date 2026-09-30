@@ -100,14 +100,13 @@ label {
     width: 80%;
     height: auto;
     pointer-events: none;
-    margin-top: 200px;
 }
 
 #playerInput {
     flex: 1;
     width: 100%;
     min-width: 0;
-    padding: 8px 3px 5px;
+    padding: 8px 3px 12px;
     font-family: "Luminari", "Bradley Hand", "Comic Sans MS", cursive;
     font-size: 20px;
     color: #30261b;
@@ -137,23 +136,28 @@ label {
 
 /* "Add" is now just text on the parchment */
 
-#addPlayer {
+#addButton {
     flex: 0 0 auto;
+    width: auto;
     padding: 4px 2px;
+
     font-family: "Luminari", Georgia, "Times New Roman", serif;
     font-size: 17px;
     font-weight: normal;
+
     color: #3d4a3b;
     background: transparent;
     border: none;
     border-radius: 0;
     box-shadow: none;
+    white-space: nowrap;
 }
 
-#addPlayer:hover {
+#addButton:hover {
     color: #1f2a1e;
     background: transparent;
     text-decoration: underline;
+    box-shadow: none;
 }
 /* General buttons */
 
