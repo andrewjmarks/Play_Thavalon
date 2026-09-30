@@ -95,7 +95,7 @@ label {
 
 .signature-line {
     position: absolute;
-    left: -50;
+    left: 10;
     bottom: 0;
     width: 80%;
     height: auto;
