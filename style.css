@@ -85,19 +85,34 @@ label {
     margin-top: 20px;
 }
 
+.signature-input {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+}
+
+.signature-line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
 #playerInput {
     flex: 1;
     min-width: 0;
     padding: 8px 3px 5px;
-    font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+    font-family: "Luminari", "Bradley Hand", "Comic Sans MS", cursive;
     font-size: 20px;
     color: #30261b;
 
     /* Remove the box */
     background: transparent;
     border: none;
-    border-bottom: 2px solid #55442d;
-    border-radius: 0;
+    /* border-bottom: 2px solid #55442d;
+    border-radius: 0; */
     outline: none;
 
     /* Make the line feel like it is written on the parchment */
@@ -107,7 +122,7 @@ label {
 #playerInput::placeholder {
     color: #796b55;
     opacity: 0.65;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Luminari", Georgia, "Times New Roman", serif;
     font-style: italic;
 }
 
