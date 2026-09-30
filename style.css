@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 @font-face {
     font-family: "Amador";
     src: url("./fonts/Amador.ttf") format("truetype");
@@ -29,7 +36,7 @@ body {
     /* Parchment image */
     background-image: url("./assets/parchment.jpg");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center top;
     background-size: cover;
 
     color: #2c2419;
@@ -375,10 +382,22 @@ button:active {
     .game-container {
         padding: 30px 15px 45px;
     }
+    
+    .header {
+    gap: 8px;
+    width: 100%;
+    max-width: 100%;
+    }
 
+    .header-sword {
+    width: 55px;
+    max-width: 15vw;
+    }
+    
     h1 {
-        font-size: 34px;
-        letter-spacing: 2px;
+    font-size: 42px;
+    letter-spacing: 1px;
+    white-space: nowrap;
     }
 
     h2 {
@@ -408,15 +427,14 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: clamp(8px, 2vw, 25px);
+    width: 100%;
+    max-width: 100%;
     margin-bottom: 10px;
 }
 
 .header-sword {
-    width: 200px;
+    width: clamp(55px, 12vw, 200px);
+    max-width: 15vw;
     object-fit: contain;
-}
-
-.sword-right {
-    transform: scaleX(-1);
 }
