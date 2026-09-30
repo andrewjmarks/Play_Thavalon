@@ -4,7 +4,15 @@
 
 @font-face {
     font-family: "Amador";
-    src: url("./Amador.ttf") format("truetype");
+    src: url("./fonts/Amador.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Luminari";
+    src: url("./fonts/Luminari.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -13,13 +21,13 @@
 body {
     margin: 0;
     min-height: 100vh;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Luminari", Georgia, "Times New Roman", serif;
 
     /* Fallback color */
-    background-color: #dfcda8;
+    background-color: #2d2418;
 
     /* Parchment image */
-    background-image: url("./parchment.jpg");
+    background-image: url("./assets/parchment.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
