@@ -25,6 +25,22 @@ body {
     font-display: swap;
 }
 
+@font-face {
+  font-family: 'fondamento'
+  src: url('fonts/Fondamento-regular.tff') format("truetype")
+  font-weight: 400; /* or 'normal' */
+  font-style: normal;
+  font-display: swap; /* Helps text load faster without blinking */
+}
+@font-face {
+  font-family: 'fondamento'
+  src: url('fonts/Fondamento-italic.tff') format("truetype")
+  font-weight: 400; /* or 'normal' */
+  font-style: italic;
+  font-display: swap; /* Helps text load faster without blinking */
+}
+
+
 body {
     margin: 0;
     min-height: 100vh;
