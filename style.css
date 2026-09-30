@@ -95,11 +95,12 @@ label {
 
 .signature-line {
     position: absolute;
-    left: 0;
+    left: -50;
     bottom: 0;
-    width: 100%;
+    width: 80%;
     height: auto;
     pointer-events: none;
+    margin-top: 20px;
 }
 
 #playerInput {
