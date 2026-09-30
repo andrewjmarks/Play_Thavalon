@@ -27,14 +27,14 @@ body {
 
 @font-face {
   font-family: 'Fondamento'
-  src: url('fonts/Fondamento-Regular.tff') format("truetype")
+  src: url('fonts/Fondamento-Regular.ttf') format("truetype")
   font-weight: 400; /* or 'normal' */
   font-style: normal;
   font-display: swap; /* Helps text load faster without blinking */
 }
 @font-face {
   font-family: 'Fondamento'
-  src: url('fonts/Fondamento-Italic.tff') format("truetype")
+  src: url('fonts/Fondamento-Italic.ttf') format("truetype")
   font-weight: 400; /* or 'normal' */
   font-style: italic;
   font-display: swap; /* Helps text load faster without blinking */
