@@ -69,29 +69,64 @@ label {
     font-weight: bold;
 }
 
-.input-row {
+.signature-row {
     display: flex;
-    gap: 8px;
+    align-items: baseline;
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 #playerInput {
     flex: 1;
     min-width: 0;
-    padding: 14px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 17px;
-    color: #2c2419;
-    background: rgba(255, 249, 235, 0.8);
-    border: 2px solid #8c7652;
-    border-radius: 5px;
+    padding: 8px 3px 5px;
+    font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+    font-size: 20px;
+    color: #30261b;
+
+    /* Remove the box */
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #55442d;
+    border-radius: 0;
     outline: none;
+
+    /* Make the line feel like it is written on the parchment */
+    box-shadow: none;
+}
+
+#playerInput::placeholder {
+    color: #796b55;
+    opacity: 0.65;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
 }
 
 #playerInput:focus {
-    border-color: #514936;
-    box-shadow: 0 0 0 2px rgba(81, 73, 54, 0.15);
+    border-bottom-color: #30261b;
+    box-shadow: none;
 }
 
+/* "Add" is now just text on the parchment */
+
+#addPlayer {
+    padding: 4px 2px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    font-weight: normal;
+    color: #3d4a3b;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#addPlayer:hover {
+    color: #1f2a1e;
+    background: transparent;
+    text-decoration: underline;
+}
 /* General buttons */
 
 button {
@@ -128,30 +163,46 @@ button:active {
 .player {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    padding: 13px 15px;
-    background: rgba(255, 249, 235, 0.75);
-    border: 1px solid #b39a70;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(70, 55, 30, 0.08);
+    align-items: baseline;
+
+    padding: 9px 3px 7px;
+    border-bottom: 1px solid rgba(84, 68, 45, 0.45);
+
+    font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+    font-size: 19px;
+    color: #30261b;
+}
+
+.player span {
+    overflow-wrap: anywhere;
 }
 
 .remove-button {
-    padding: 6px 10px;
-    font-size: 14px;
-    background: #66584a;
+    padding: 2px 3px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    font-weight: normal;
+
+    color: #796b55;
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 .remove-button:hover {
-    background: #786858;
+    color: #5a3028;
+    background: transparent;
+    text-decoration: underline;
 }
 
 /* Player count */
 
 #playerCount {
-    margin: 12px 0;
+    margin: 18px 0 5px;
     text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
     font-style: italic;
     color: #62543f;
 }
@@ -330,7 +381,7 @@ button:active {
 }
 
 .header-sword {
-    width: 100px;
+    width: 200px;
     object-fit: contain;
 }
 
