@@ -33,7 +33,7 @@ body {
   font-display: swap; /* Helps text load faster without blinking */
 }
 @font-face {
-  font-family: 'fondamento'
+  font-family: 'Fondamento'
   src: url('fonts/Fondamento-italic.tff') format("truetype")
   font-weight: 400; /* or 'normal' */
   font-style: italic;
@@ -186,7 +186,7 @@ label {
 
 button {
     padding: 12px 20px;
-    font-family: "Luminari", Georgia, "Times New Roman", serif;
+    font-family: "Fondamento", Georgia, "Times New Roman", serif;
     font-size: 16px;
     font-weight: bold;
     color: #f7edda;
