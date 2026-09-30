@@ -145,7 +145,7 @@ label {
     font-size: 35px;
     font-weight: normal;
 
-    color: #3d4a3b;
+    color: #2d2418;
     background: transparent;
     border: none;
     border-radius: 0;
@@ -154,7 +154,7 @@ label {
 }
 
 #addButton:hover {
-    color: #1f2a1e;
+    color: #2d2418;
     background: transparent;
     text-decoration: underline;
     box-shadow: none;
