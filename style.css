@@ -42,11 +42,11 @@ h1 {
     margin: 0;
     text-align: center;
     font-family: "Amador", Georgia, "Times New Roman", serif;
-    font-size: 48px;
+    font-size: 68px;
     font-weight: normal;
     letter-spacing: 2px;
     color: #2d2418;
-    text-shadow: 1px 1px 0 #f7edda;
+    text-shadow: 2px 2px 0 #f7edda;
 }
 
 h2 {
