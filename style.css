@@ -79,7 +79,9 @@ label {
 
 .signature-row {
     display: flex;
-    align-items: baseline;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: nowrap;
     gap: 12px;
     width: 100%;
     margin-top: 0px;
@@ -87,10 +89,8 @@ label {
 
 .signature-input {
     position: relative;
-    flex: 1;
-    width: 100%;
+    flex: 1 1 0;
     min-width: 0;
-    margin-bottom: 20px;
 }
 
 .signature-line {
@@ -100,7 +100,7 @@ label {
     width: 80%;
     height: auto;
     pointer-events: none;
-    margin-top: 20px;
+    margin-top: 200px;
 }
 
 #playerInput {
