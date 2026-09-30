@@ -385,13 +385,10 @@ button:active {
     
     .header {
     gap: 8px;
-    width: 100%;
-    max-width: 100%;
     }
 
     .header-sword {
     width: 55px;
-    max-width: 15vw;
     }
     
     h1 {
@@ -427,14 +424,14 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(8px, 2vw, 25px);
+    gap: 25px;
     width: 100%;
     max-width: 100%;
     margin-bottom: 10px;
 }
 
 .header-sword {
-    width: clamp(55px, 12vw, 200px);
-    max-width: 15vw;
+    width: 200px;
+    height: auto;
     object-fit: contain;
 }
