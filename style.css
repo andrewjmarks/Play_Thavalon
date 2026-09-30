@@ -170,7 +170,7 @@ label {
 
 button {
     padding: 12px 20px;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Luminari", Georgia, "Times New Roman", serif;
     font-size: 16px;
     font-weight: bold;
     color: #f7edda;
@@ -207,7 +207,7 @@ button:active {
     padding: 9px 3px 7px;
     border-bottom: 1px solid rgba(84, 68, 45, 0.45);
 
-    font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+    font-family: "Luminari", "Bradley Hand", "Comic Sans MS", cursive;
     font-size: 19px;
     color: #30261b;
 }
@@ -219,7 +219,7 @@ button:active {
 .remove-button {
     padding: 2px 3px;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Luminari", Georgia, "Times New Roman", serif;
     font-size: 13px;
     font-weight: normal;
 
