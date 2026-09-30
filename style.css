@@ -330,8 +330,7 @@ button:active {
 }
 
 .header-sword {
-    width: 55px;
-    height: 55px;
+    width: 100px;
     object-fit: contain;
 }
 
