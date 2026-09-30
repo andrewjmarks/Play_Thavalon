@@ -13,9 +13,18 @@
 body {
     margin: 0;
     min-height: 100vh;
+
     font-family: Georgia, "Times New Roman", serif;
-    background:
-        radial-gradient(circle at top, #f3e6c8 0%, #dfcda8 45%, #c5ad82 100%);
+
+    /* Parchment color is the fallback */
+    background-color: #dfcda8;
+
+    /* Parchment texture */
+    background-image: url("./parchment.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
     color: #2c2419;
 }
 
