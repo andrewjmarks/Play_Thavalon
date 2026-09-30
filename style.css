@@ -88,6 +88,7 @@ label {
 .signature-input {
     position: relative;
     flex: 1;
+    width: 100%;
     min-width: 0;
 }
 
@@ -102,6 +103,7 @@ label {
 
 #playerInput {
     flex: 1;
+    width: 100%;
     min-width: 0;
     padding: 8px 3px 5px;
     font-family: "Luminari", "Bradley Hand", "Comic Sans MS", cursive;
@@ -134,8 +136,9 @@ label {
 /* "Add" is now just text on the parchment */
 
 #addPlayer {
+    flex: 0 0 auto;
     padding: 4px 2px;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Luminari", Georgia, "Times New Roman", serif;
     font-size: 17px;
     font-weight: normal;
     color: #3d4a3b;
