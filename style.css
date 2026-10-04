@@ -516,17 +516,17 @@ button:active {
    ========================= */
 
 #playerInformation {
-    min-height: 150px;
+    height: 150px;
 
     margin-top: 25px;
     padding: 30px 25px;
 
     white-space: pre-line;
 
-    line-height: 1.7;
+    line-height: 1.5;
 
     font-family: "Luminari", Georgia, serif;
-    font-size: 18px;
+    font-size: clamp(12px, 2.5vw, 18px);
 
     text-align: center;
 
