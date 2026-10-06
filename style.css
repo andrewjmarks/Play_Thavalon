@@ -61,7 +61,8 @@ body {
     background-image: url("./assets/parchment.jpg");
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: cover;
+    background-size: 100% 100vh;
+    background-attachment: fixed;
 }
 
 
