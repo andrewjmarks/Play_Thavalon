@@ -161,10 +161,10 @@ if (seenCharacters.length !== 0) {
     if (seenPlayers.length === 1) {
         seenPlayersText = seenPlayers[0];
     } else if (seenPlayers.length === 2) {
-        seenPlayersText = `${seenPlayers[0]} & ${seenPlayers[1]}`;
+        seenPlayersText = `${seenPlayers[0]} and ${seenPlayers[1]}`;
     } else {
         seenPlayersText =
-            `${seenPlayers.slice(0, -1).join(", ")} & ${seenPlayers[seenPlayers.length - 1]}`;
+            `${seenPlayers.slice(0, -1).join(", ")}, and  ${seenPlayers[seenPlayers.length - 1]}`;
     }
 
     var description =
