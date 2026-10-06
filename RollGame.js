@@ -123,7 +123,7 @@ function createDescription(assigned, player){
     Object.entries(assigned)
     .filter(([player, character]) => arthurView.includes(character))
     .forEach(([player, character]) => {
-      statement = statement + character + "\n"
+      statement = statement + character + ", "
     });
     break;
   case "Titania":
