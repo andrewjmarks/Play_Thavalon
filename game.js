@@ -73,7 +73,19 @@ players.forEach((player) => {
         console.log("Clicked player:", player.name);
         console.log("Saved information:", player.character);
 
-        playerInformationElement.textContent = player.character;
+playerInformationElement.textContent = player.character;
+
+let fontSize = 18;
+playerInformationElement.style.fontSize = `${fontSize}px`;
+
+while (
+    (playerInformationElement.scrollHeight > playerInformationElement.clientHeight ||
+     playerInformationElement.scrollWidth > playerInformationElement.clientWidth) &&
+    fontSize > 10
+) {
+    fontSize -= 1;
+    playerInformationElement.style.fontSize = `${fontSize}px`;
+}
     });
 
     playerButtons.appendChild(button);
