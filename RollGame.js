@@ -155,11 +155,26 @@ function createDescription(assigned, player){
     break;
   default:
 }
-if(seenCharacters.length !== 0) {
-  var description = baseDescription + "You see " + seenPlayers + " as " + statement
+if (seenCharacters.length !== 0) {
+    let seenPlayersText;
 
+    if (seenPlayers.length === 1) {
+        seenPlayersText = seenPlayers[0];
+    } else if (seenPlayers.length === 2) {
+        seenPlayersText = `${seenPlayers[0]} & ${seenPlayers[1]}`;
+    } else {
+        seenPlayersText =
+            `${seenPlayers.slice(0, -1).join(", ")} & ${seenPlayers[seenPlayers.length - 1]}`;
+    }
+
+    var description =
+        baseDescription +
+        "You see " +
+        seenPlayersText +
+        " as " +
+        statement;
 } else {
-  var description = baseDescription + statement
+    var description = baseDescription + statement;
 }
 
 
