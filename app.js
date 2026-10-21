@@ -347,7 +347,7 @@ alignment.textContent = info.alignment;
 
 const playerCounts = document.createElement("p");
 playerCounts.className = "character-guide-player-counts";
-playerCounts.textContent = info.playerCounts;
+playerCounts.textContent = info.playerCount;
 
 const description = document.createElement("p");
 description.textContent = info.description;
