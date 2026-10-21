@@ -289,7 +289,6 @@ return description
 }
 
 function guinevereDescription(assigned, misinformation = false) {
-    function guinevereDescription(assigned, misinformation = false) {
     const guineverePlayer = Object.keys(assigned).find(
         player => assigned[player] === "Guinevere"
     );
