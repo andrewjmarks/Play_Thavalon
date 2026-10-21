@@ -17,6 +17,29 @@
     <img src="/Play_Thavalon/assets/sword2.svg" alt="" class="header-sword">
 </div>
 
+
+<button id="howToPlayButton" type="button">How to Play</button>
+
+<div id="howToPlayOverlay" class="how-to-play-overlay" hidden>
+    <div class="how-to-play-panel" role="dialog" aria-modal="true" aria-labelledby="howToPlayTitle">
+
+        <button id="closeHowToPlay" class="close-how-to-play" type="button" aria-label="Close">×</button>
+
+        <h2 id="howToPlayTitle">How to Play</h2>
+
+        <p class="how-to-play-intro">
+            Select a character to learn their abilities.
+        </p>
+
+        <div id="characterGuideButtons" class="character-guide-buttons"></div>
+
+        <div id="characterGuideDescription" class="character-guide-description" aria-live="polite">
+            Choose a character above to discover their abilities.
+        </div>
+
+    </div>
+</div>
+
         <section class="player-section">
             <div class="signature-row">
                 <div class="signature-input">
