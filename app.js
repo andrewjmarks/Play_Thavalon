@@ -247,4 +247,152 @@ async function loadOpenGames() {
     });
 }
 
+
+const characterGuide = {
+    Merlin: {
+        alignment: "Good",
+        playerCount: "5+ players",
+        description: "You learn all players who are evil (except for Mordred), but Lancelot may also appear in your information."
+    },
+    Percival: {
+        alignment: "Good",
+        playerCount: "5+ players",
+        description: "You learn which players are Merlin or Morgana, but you cannot tell which one is which."
+    },
+    Lancelot: {
+        alignment: "Good",
+        playerCount: "5+ players",
+        description: "You may play a reversal card."
+    },
+    Iseult: {
+        alignment: "Good",
+        playerCount: "5+ players",
+        description: "You learn who your lover Tristan is."
+    },
+    Tristan: {
+        alignment: "Good",
+        playerCount: "5+ players",
+        description: "You learn who your lover Iseult is."
+    },
+    Guinevere: {
+        alignment: "Good",
+        playerCount: "5+ players",
+        description: "You receive two statements about which players see other players. One statement is true and the other is false."
+    },
+    Titania: {
+        alignment: "Good",
+        playerCount: "7+ players",
+        description: "You alter one part of an evil player's information. If Oberon is in the game, you learn that he is present."
+    },
+    Arthur: {
+        alignment: "Good",
+        playerCount: "7+ players",
+        description: "You learn which good characters are in play. Your information cannot be altered by Oberon."
+    },
+    Mordred: {
+        alignment: "Evil",
+        playerCount: "5+ players",
+        description: "You learn your fellow evil teammates. You cannot be seen by Merlin"
+    },
+    Morgana: {
+        alignment: "Evil",
+        playerCount: "5+ players",
+        description: "You learn your fellow evil teammates. Percival may mistake you for Merlin."
+    },
+    Maelegant: {
+        alignment: "Evil",
+        playerCount: "5+ players",
+        description: "You learn your fellow evil teammates. You may play a reversal card."
+    },
+    Oberon: {
+        alignment: "Evil",
+        playerCount: "5+ players",
+        description: "You learn your fellow evil teammates. You also alter one part of a good player's information."
+    },
+    Agravaine: {
+        alignment: "Evil",
+        playerCount: "8+ players",
+        description: "You learn your fellow evil teammates. You must play failure cards. If you are on a successful mission, you may reveal yourself to fail the mission instead."
+    },
+    Colgrevance: {
+        alignment: "Evil",
+        playerCount: "10 players",
+        description: "You learn your fellow evil teammates as well as their exact roles."
+    }
+};
+
+const howToPlayButton = document.getElementById("howToPlayButton");
+const howToPlayOverlay = document.getElementById("howToPlayOverlay");
+const closeHowToPlay = document.getElementById("closeHowToPlay");
+const characterGuideButtons = document.getElementById("characterGuideButtons");
+const characterGuideDescription = document.getElementById("characterGuideDescription");
+
+// Create a button for every character.
+Object.entries(characterGuide).forEach(([name, info]) => {
+    const button = document.createElement("button");
+
+    button.type = "button";
+    button.className = "character-guide-button";
+    button.textContent = name;
+
+    button.addEventListener("click", () => {
+        characterGuideDescription.replaceChildren();
+
+        const title = document.createElement("h3");
+        title.textContent = name;
+
+const alignment = document.createElement("p");
+alignment.className = "character-guide-alignment";
+alignment.textContent = info.alignment;
+
+const playerCounts = document.createElement("p");
+playerCounts.className = "character-guide-player-counts";
+playerCounts.textContent = info.playerCounts;
+
+const description = document.createElement("p");
+description.textContent = info.description;
+
+characterGuideDescription.append(
+    title,
+    alignment,
+    playerCounts,
+    description
+);
+
+        document.querySelectorAll(".character-guide-button")
+            .forEach(item => item.classList.remove("selected"));
+
+        button.classList.add("selected");
+    });
+
+    characterGuideButtons.appendChild(button);
+});
+
+function openHowToPlay() {
+    howToPlayOverlay.hidden = false;
+}
+
+function closeHowToPlayOverlay() {
+    howToPlayOverlay.hidden = true;
+}
+
+howToPlayButton.addEventListener("click", openHowToPlay);
+closeHowToPlay.addEventListener("click", closeHowToPlayOverlay);
+
+// Close when clicking the darkened area outside the panel.
+howToPlayOverlay.addEventListener("click", (event) => {
+    if (event.target === howToPlayOverlay) {
+        closeHowToPlayOverlay();
+    }
+});
+
+// Close with Escape.
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !howToPlayOverlay.hidden) {
+        closeHowToPlayOverlay();
+    }
+});
+
+
+
 loadOpenGames();
